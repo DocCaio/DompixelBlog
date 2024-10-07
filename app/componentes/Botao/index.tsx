@@ -1,5 +1,5 @@
 import { ReactElement } from 'react'
-//import './Botao.css'
+import './Botao.css'
 
 interface BotaoProps {
     children: ReactElement | string

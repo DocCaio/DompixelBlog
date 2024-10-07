@@ -1,10 +1,9 @@
-"use client";
-import { useState } from 'react';
-import { IColaborador } from '../../compartilhado/interfaces/IColaborador';
-import Botao from '../Button';
-import CampoTexto from '../CampoTexto';
-import ListaSuspensa from '../DropDawn';
-//import './Formulario.css';
+import { useState } from 'react'
+import { IColaborador } from '../../compartilhado/interfaces/IColaborador'
+import Botao from '../Botao'
+import CampoTexto from '../CampoTexto'
+import ListaSuspensa from '../ListaSuspensa'
+import './Formulario.css'
 
 interface FormularioProps {
     aoColaboradorCadastrado: (colaborador: IColaborador) => void

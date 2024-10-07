@@ -1,4 +1,4 @@
-//import './Colaborador.css'
+import './Colaborador.css'
 
 interface ColaboradorProps {
     nome: string

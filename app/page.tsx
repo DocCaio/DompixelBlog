@@ -1,12 +1,12 @@
 "use client";
 import { useState } from 'react';
-import Formulario from './Components/Form';
-import Time from './Components/Time';
-
-import Banner from './Components/Banner'
+import Formulario from './componentes/Formulario';
+import Time from './componentes/Time';
+import Rodape  from './componentes/Rodape';
+import Banner from './componentes/Banner';
 import { IColaborador } from './compartilhado/interfaces/IColaborador';
 
-function App() {
+function Home() {
 
   const times = [
     {
@@ -64,9 +64,9 @@ function App() {
         corSecundaria={time.corSecundaria} 
         colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
       />)}   
-
+       <Rodape />
     </div>
   );
 }
 
-export default App;
+export default Home;
