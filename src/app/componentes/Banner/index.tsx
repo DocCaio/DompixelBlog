@@ -1,16 +1,18 @@
-import './Banner.css'
+import './Banner.css';
+import img from './assets/banner.png';
+import Image from 'next/image';
+
 
 interface BannerProps {
     enderecoImagem: string
     textoAlternativo?: string
 }
 
-const Banner = ({ enderecoImagem, textoAlternativo } :BannerProps) => {
-    // JSX
+const Banner = () => {
+   
     return (
-        <header className="banner">
-            {/* <img src="" alt="O banner principal da página do Organo"/> */}
-            <img src={enderecoImagem} alt={textoAlternativo}/>
+        <header className="banner">            
+            <Image alt='banner' src={img}/>
         </header>
     )
 }

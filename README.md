@@ -1,29 +1,36 @@
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Getting Started
 
-# DompixelBlog
+First, run the development server:
 
-O DompixelBlog é aplicação desenvolvida para um teste Next: desenvolvendo com TypeScript.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 🔨 Funcionalidades do projeto
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-Você pode comentar no projeto.
-A iamgem pode ser adcioanda no comentário com o link do seu Github e .png
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-exemplo:
-https://github.com/DocCaio.png
+## Learn More
 
-## ✔️ Técnicas e tecnologias utilizadas
+To learn more about Next.js, take a look at the following resources:
 
-- `Next`
-- `Mantine.dev`
-- `TypeScript`
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-E muito mais!
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## 🛠️ Abrir e rodar o projeto
+## Deploy on Vercel
 
-Para abrir e rodar o projeto, execute `npm i` para instalar as dependências e `npm run dev` para inicar o projeto.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Depois, acesse <a href="http://localhost:3000/">http://localhost:3000/</a> no seu navegador.
-
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

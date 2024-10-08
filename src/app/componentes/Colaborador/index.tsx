@@ -1,4 +1,5 @@
-import './Colaborador.css'
+
+import './Colaborador.css';
 
 interface ColaboradorProps {
     nome: string
@@ -21,4 +22,4 @@ const Colaborador = ({ nome, imagem, cargo, corDeFundo, data }: ColaboradorProps
     </div>)
 }
 
-export default Colaborador
+export default Colaborador;

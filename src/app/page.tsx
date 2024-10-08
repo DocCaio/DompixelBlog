@@ -1,46 +1,48 @@
-"use client";
+'use client';
 import { useState } from 'react';
 import Formulario from './componentes/Formulario';
 import Time from './componentes/Time';
-import Rodape  from './componentes/Rodape';
-import Banner from './componentes/Banner';
+import Rodape from './componentes/Rodape';
+
+
+import Banner from './componentes/Banner'
 import { IColaborador } from './compartilhado/interfaces/IColaborador';
 
-function Home() {
+function App() {
 
   const times = [
     {
-      nome: 'Programação',
+      nome: 'Esporte',
       corPrimaria: '#57C278',
       corSecundaria: '#D9F7E9'
     },
     {
-      nome: 'Front-End',
+      nome: 'Ciência',
       corPrimaria: '#82CFFA',
       corSecundaria: '#E8F8FF'
     },
     {
-      nome: 'Data Science',
+      nome: 'Política',
       corPrimaria: '#A6D157',
       corSecundaria: '#F0F8E2'
     },
     {
-      nome: 'Devops',
+      nome: 'Tecnologia',
       corPrimaria: '#E06B69',
       corSecundaria: '#FDE7E8'
     },
     {
-      nome: 'UX e Design',
+      nome: 'Religião',
       corPrimaria: '#DB6EBF',
       corSecundaria: '#FAE9F5'
     },
     {
-      nome: 'Mobile',
+      nome: 'Games',
       corPrimaria: '#FFBA05',
       corSecundaria: '#FFF5D9'
     },
     {
-      nome: 'Inovação e Gestão',
+      nome: 'Culinária',
       corPrimaria: '#FF8A29',
       corSecundaria: '#FFEEDF'
     }
@@ -54,7 +56,7 @@ function Home() {
 
   return (
     <div className="App">
-      <Banner enderecoImagem='/imagens/banner.png'/>
+      <Banner/>
       <Formulario times={times.map(time => time.nome)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}/>
 
       {times.map(time => <Time 
@@ -64,9 +66,9 @@ function Home() {
         corSecundaria={time.corSecundaria} 
         colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
       />)}   
-       <Rodape />
+       <Rodape/>
     </div>
   );
 }
 
-export default Home;
+export default App;

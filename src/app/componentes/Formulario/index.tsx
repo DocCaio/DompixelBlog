@@ -1,9 +1,10 @@
-import { useState } from 'react'
-import { IColaborador } from '../../compartilhado/interfaces/IColaborador'
-import Botao from '../Botao'
-import CampoTexto from '../CampoTexto'
-import ListaSuspensa from '../ListaSuspensa'
-import './Formulario.css'
+'use client';
+import { useState } from 'react';
+import { IColaborador } from '../../compartilhado/interfaces/IColaborador';
+import Botao from '../Botao';
+import CampoTexto from '../CampoTexto';
+import ListaSuspensa from '../ListaSuspensa';
+import './Formulario.css';
 
 interface FormularioProps {
     aoColaboradorCadastrado: (colaborador: IColaborador) => void
@@ -36,7 +37,7 @@ const Formulario = (props: FormularioProps) => {
     return (
         <section className="formulario">
             <form onSubmit={evento => aoSalvar(evento)}>
-                <h2>Preencha os dados para criar o card do colaborador</h2>
+                <h2>Preencha os dados corretamente para comentar</h2>
                 <CampoTexto 
                     obrigatorio={true}
                     label="Nome"
@@ -46,8 +47,8 @@ const Formulario = (props: FormularioProps) => {
                 />
                 <CampoTexto
                     obrigatorio={true}
-                    label="Cargo"
-                    placeholder="Digite seu cargo" 
+                    label="Comentário"
+                    placeholder="Digite seu comentário" 
                     valor={cargo}
                     aoAlterado={valor => setCargo(valor)}
                 />
@@ -58,7 +59,7 @@ const Formulario = (props: FormularioProps) => {
                     aoAlterado={valor => setImagem(valor)}
                 />
                 <CampoTexto
-                    label='Data de entrada no time'
+                    label='Data de entrada no assunto'
                     placeholder=''
                     valor={data}
                     aoAlterado={valor => setData(valor)}
@@ -72,7 +73,7 @@ const Formulario = (props: FormularioProps) => {
                     aoAlterado={valor => setTime(valor)}
                 />
                 <Botao>
-                    Criar Card
+                    Comentar
                 </Botao>
             </form>
         </section>
