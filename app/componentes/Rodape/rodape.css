@@ -4,7 +4,7 @@
     padding: 80px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;    
 }
 
 .footer ul li {
@@ -16,8 +16,21 @@
     margin-right: 0;
 }
 
+.footer p {
+    font-size: 30px;
+    font-weight: 600;
+}
+
 
 .img {
-    height:100px;
-    width: 100px;
+    height:100%;
+    width: 200px;
 }
+
+
+@media (max-width: 600px) {
+    .footer {
+        gap: 30px;
+      
+    }
+  }
