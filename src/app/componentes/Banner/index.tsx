@@ -3,10 +3,7 @@ import img from './assets/banner.png';
 import Image from 'next/image';
 
 
-interface BannerProps {
-    enderecoImagem: string
-    textoAlternativo?: string
-}
+
 
 const Banner = () => {
    
