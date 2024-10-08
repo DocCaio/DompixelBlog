@@ -1,9 +1,10 @@
-import { useState } from 'react'
-import { IColaborador } from '../../compartilhado/interfaces/IColaborador'
-import Botao from '../Botao'
-import CampoTexto from '../CampoTexto'
-import ListaSuspensa from '../ListaSuspensa'
-import './Formulario.css'
+'use client';
+import { useState } from 'react';
+import { IColaborador } from '../../compartilhado/interfaces/IColaborador';
+import Botao from '../Botao';
+import CampoTexto from '../CampoTexto';
+import ListaSuspensa from '../ListaSuspensa';
+import './Formulario.css';
 
 interface FormularioProps {
     aoColaboradorCadastrado: (colaborador: IColaborador) => void
@@ -13,24 +14,24 @@ interface FormularioProps {
 const Formulario = (props: FormularioProps) => {
 
     const [nome, setNome] = useState('')
-    const [cargo, setCargo] = useState('')
+    const [comentario, setComentario] = useState('')
     const [imagem, setImagem] = useState('')
-    const [time, setTime] = useState('')
+    const [assunto, setAssunto] = useState('')
     const [data, setData] = useState('')
 
     const aoSalvar = (evento: React.FormEvent<HTMLFormElement> ) => {
         evento.preventDefault()
         props.aoColaboradorCadastrado({
             nome,
-            cargo,
+            comentario,
             imagem,
-            time,
+            assunto,
             data
         })
         setNome('')
-        setCargo('')
+        setComentario('')
         setImagem('')
-        setTime('')
+        setAssunto('')
     }
 
     return (
@@ -47,9 +48,9 @@ const Formulario = (props: FormularioProps) => {
                 <CampoTexto
                     obrigatorio={true}
                     label="Comentário"
-                    placeholder="Digite seu cargo" 
-                    valor={cargo}
-                    aoAlterado={valor => setCargo(valor)}
+                    placeholder="Digite seu comentário" 
+                    valor={comentario}
+                    aoAlterado={valor => setComentario(valor)}
                 />
                 <CampoTexto
                     label="Imagem"
@@ -58,7 +59,7 @@ const Formulario = (props: FormularioProps) => {
                     aoAlterado={valor => setImagem(valor)}
                 />
                 <CampoTexto
-                    label='Data de entrada no time'
+                    label='Data de entrada no assunto'
                     placeholder=''
                     valor={data}
                     aoAlterado={valor => setData(valor)}
@@ -68,8 +69,8 @@ const Formulario = (props: FormularioProps) => {
                     obrigatorio={true}
                     label="Assunto" 
                     itens={props.times}
-                    valor={time}
-                    aoAlterado={valor => setTime(valor)}
+                    valor={assunto}
+                    aoAlterado={valor => setAssunto(valor)}
                 />
                 <Botao>
                     Publicar

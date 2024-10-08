@@ -1,4 +1,4 @@
-import './CampoTexto.css'
+import './CampoTexto.css';
 
 interface CampoTextoProps {
     aoAlterado: (valor: string) => void
@@ -33,4 +33,4 @@ const CampoTexto = ({ aoAlterado, label, placeholder, valor, obrigatorio = false
     )
 }
 
-export default CampoTexto
+export default CampoTexto;

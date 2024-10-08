@@ -1,29 +1,13 @@
-
-import './rodape.css'
+import './rodape.css';
+import Image from 'next/image';
+import Logo from './assets/logo.png';
 
 const Rodape = () => {
-    return (<footer className="footer">
+    return (<footer className="footer">       
        <section>
-       <ul>
-            <li>
-                <a href="facebook.com" target="_blank">
-                    <img src="/imagens/facebook.png" alt="" />
-                </a>
-            </li>
-            <li>
-                <a href="twitter.com" target="_blank">
-                    <img src="/imagens/twitter.png" alt="" />
-                </a>
-            </li>
-            <li>
-                <a href="instagram.com" target="_blank">
-                    <img src="/imagens/instagram.png" alt="" />
-                </a>
-            </li>
-        </ul>
-       </section>
-       <section>
-       <img src="/imagens/logo.png" alt="" />
+
+       <Image className='img' src={Logo} alt="Logo"/>  
+       
        </section>
        <section>
         <p>
@@ -33,4 +17,4 @@ const Rodape = () => {
     </footer>)
 }
 
-export default Rodape
+export default Rodape;
