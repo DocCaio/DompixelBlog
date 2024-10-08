@@ -1,6 +1,7 @@
+
 import { IColaborador } from '../../compartilhado/interfaces/IColaborador';
 import Colaborador from '../Colaborador';
-import './Time.css';
+import './Assunto.css';
 
 interface TimeProps {
     corPrimaria: string
@@ -31,4 +32,4 @@ const Time = (props: TimeProps) => {
     )
 }
 
-export default Time;
+export default Time

@@ -8,7 +8,7 @@ interface BannerProps {
 }
 
 const Banner = ({ } :BannerProps) => {
-    // JSX
+    
     return (
         <header className="banner">
              <Image src={Ban} alt="O banner principal da página"/>             
@@ -16,4 +16,4 @@ const Banner = ({ } :BannerProps) => {
     )
 }
 
-export default Banner
+export default Banner;

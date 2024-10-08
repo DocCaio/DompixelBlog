@@ -8,7 +8,7 @@ import './Formulario.css';
 
 interface FormularioProps {
     aoColaboradorCadastrado: (colaborador: IColaborador) => void
-    times: string[]
+    assuntos: string[]
 }
 
 const Formulario = (props: FormularioProps) => {
@@ -37,7 +37,7 @@ const Formulario = (props: FormularioProps) => {
     return (
         <section className="formulario">
             <form onSubmit={evento => aoSalvar(evento)}>
-                <h2>Preencha os dados corretamente para postar</h2>
+                <h2>Preencha os dados para comentar</h2>
                 <CampoTexto 
                     obrigatorio={true}
                     label="Nome"
@@ -47,8 +47,8 @@ const Formulario = (props: FormularioProps) => {
                 />
                 <CampoTexto
                     obrigatorio={true}
-                    label="Comentário"
-                    placeholder="Digite seu comentário" 
+                    label="Comentario"
+                    placeholder="Digite seu comentario" 
                     valor={comentario}
                     aoAlterado={valor => setComentario(valor)}
                 />
@@ -59,7 +59,7 @@ const Formulario = (props: FormularioProps) => {
                     aoAlterado={valor => setImagem(valor)}
                 />
                 <CampoTexto
-                    label='Data de entrada no assunto'
+                    label='Data do comentário'
                     placeholder=''
                     valor={data}
                     aoAlterado={valor => setData(valor)}
@@ -68,12 +68,12 @@ const Formulario = (props: FormularioProps) => {
                 <ListaSuspensa
                     obrigatorio={true}
                     label="Assunto" 
-                    itens={props.times}
+                    itens={props.assuntos}
                     valor={assunto}
                     aoAlterado={valor => setAssunto(valor)}
                 />
                 <Botao>
-                    Publicar
+                    Criar Card
                 </Botao>
             </form>
         </section>

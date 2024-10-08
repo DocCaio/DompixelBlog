@@ -1,4 +1,4 @@
-import './ListaSuspensa.css'
+import './ListaSuspensa.css';
 
 interface ListaSuspensaProps {
     aoAlterado: (valor: string) => void
@@ -26,4 +26,4 @@ const ListaSuspensa = (props: ListaSuspensaProps) => {
     )
 }
 
-export default ListaSuspensa
+export default ListaSuspensa;

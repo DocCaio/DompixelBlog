@@ -18,7 +18,7 @@
 
 .footer p {
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 
@@ -32,5 +32,14 @@
     .footer {
         gap: 30px;
       
+    }
+
+    .footer p {
+        font-size: 20px;        
+    }
+
+    .img {
+        height:100%;
+        width: 100px;
     }
   }
