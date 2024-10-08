@@ -36,7 +36,7 @@ const Formulario = (props: FormularioProps) => {
     return (
         <section className="formulario">
             <form onSubmit={evento => aoSalvar(evento)}>
-                <h2>Preencha os dados para criar o card do colaborador</h2>
+                <h2>Preencha os dados corretamente para postar</h2>
                 <CampoTexto 
                     obrigatorio={true}
                     label="Nome"
@@ -46,7 +46,7 @@ const Formulario = (props: FormularioProps) => {
                 />
                 <CampoTexto
                     obrigatorio={true}
-                    label="Cargo"
+                    label="Comentário"
                     placeholder="Digite seu cargo" 
                     valor={cargo}
                     aoAlterado={valor => setCargo(valor)}
@@ -66,17 +66,17 @@ const Formulario = (props: FormularioProps) => {
                 />
                 <ListaSuspensa
                     obrigatorio={true}
-                    label="Time" 
+                    label="Assunto" 
                     itens={props.times}
                     valor={time}
                     aoAlterado={valor => setTime(valor)}
                 />
                 <Botao>
-                    Criar Card
+                    Publicar
                 </Botao>
             </form>
         </section>
     )
 }
 
-export default Formulario
+export default Formulario;
