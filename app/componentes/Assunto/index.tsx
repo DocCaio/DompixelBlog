@@ -22,7 +22,7 @@ const Time = (props: TimeProps) => {
                         corDeFundo={props.corPrimaria} 
                         key={colaborador.nome} 
                         nome={colaborador.nome} 
-                        cargo={colaborador.cargo} 
+                        assunto={colaborador.assunto} 
                         imagem={colaborador.imagem}
                         data={colaborador.data}
                     /> )}

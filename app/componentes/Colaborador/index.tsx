@@ -1,4 +1,5 @@
 import './Colaborador.css';
+import Image from 'next/image';
 
 interface ColaboradorProps {
     nome: string
@@ -11,7 +12,7 @@ interface ColaboradorProps {
 const Colaborador = ({ nome, imagem, comentario, corDeFundo, data }: ColaboradorProps) => {
     return (<div className='colaborador'>
         <div className='cabecalho' style={{ backgroundColor: corDeFundo }}>
-            <img src={imagem} alt={nome}/>
+            <Image src={imagem} alt={nome}/>            
         </div>
         <div className='rodape'>
             <h4>{nome}</h4>
